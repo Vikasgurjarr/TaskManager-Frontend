@@ -11,7 +11,7 @@ import SignUp from "./components/auth/SignUpForm";
 import Team from "./pages/Team";
 import Task from "./pages/Tasks";
 
-import "./App.css";
+
 
 const App = () => {
   return (
