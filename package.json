@@ -13,8 +13,9 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/core": "^5.0.0-alpha.54",
-    "@mui/icons-material": "^5.15.19",
+    "@mui/icons-material": "^6.0.2",
     "@mui/material": "^6.0.2",
+    "@mui/system": "^6.0.2",
     "@reduxjs/toolkit": "^2.2.5",
     "@types/react": "^18.3.5",
     "axios": "^1.7.2",
@@ -30,7 +31,7 @@
     "styled-components": "^6.1.11"
   },
   "devDependencies": {
-    "@types/react-dom": "^18.2.22",
+    "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
