@@ -1,13 +1,14 @@
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom'; // Import from 'react-dom'
+import App from './App.jsx';
 import { Provider } from 'react-redux';
 import store from './react-redux/store.jsx'; // Make sure the path to your store file is correct
-import {ToastContainer} from "react-toastify";
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.render( // Use ReactDOM.render instead of createRoot
   <Provider store={store}>
-    <App/>
+    <App />
     <ToastContainer
       position="top-right"
       autoClose={2000}
@@ -20,10 +21,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       pauseOnHover
       theme="dark"
     />
-  </Provider>
-)
-
-
-
+  </Provider>,
+  document.getElementById('root')
+);
 
 export default App;
