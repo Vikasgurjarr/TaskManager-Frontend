@@ -1,0 +1,12 @@
+[build]
+  # Vite build command
+  command = "vite build"
+  # Directory where Vite outputs the built files
+  publish = "dist"
+  
+
+[[redirects]]
+  # Redirect all other requests to the index.html for client-side routing
+  from = "/*"
+  to = "/index.html"
+  status = 200
