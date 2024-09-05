@@ -5,7 +5,10 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['react-dom/client'],
+      // Externalizing `react-dom/client` is not required
+      // Remove the `external` field
     },
+    outDir: 'dist', // Ensure this matches your build output directory
+    chunkSizeWarningLimit: 600, // Optional: Increase if necessary to avoid chunk size warnings
   },
 });
