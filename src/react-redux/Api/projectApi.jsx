@@ -10,7 +10,7 @@ import {
 } from "../Actions/projectActions";
 
 const api = axios.create({
-  baseURL: "http://localhost:3000/api",
+  baseURL: "https://taskyoubackend.netlify.app/.netlify/functions/server/api",
 });
 
 const getAuthToken = (state) => state.auth.token;

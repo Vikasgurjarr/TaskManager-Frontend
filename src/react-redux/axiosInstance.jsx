@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3000/api/auth";
+const BASE_URL = "https://taskyoubackend.netlify.app/.netlify/functions/server/api/auth";
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,

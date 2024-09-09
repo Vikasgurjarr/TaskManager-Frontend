@@ -77,7 +77,7 @@ const Task = () => {
   const fetchUsers = async () => {
     try {
       const authToken = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/api/auth/users", {
+      const response = await fetch("https://taskyoubackend.netlify.app/.netlify/functions/server/api/auth/users", {
         headers: {
           Authorization: `Bearer ${authToken}`,
         },
@@ -96,7 +96,7 @@ const Task = () => {
   const fetchProjects = async () => {
     try {
       const authToken = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/api/projects", {
+      const response = await fetch("https://taskyoubackend.netlify.app/.netlify/functions/server/api/projects", {
         headers: {
           Authorization: `Bearer ${authToken}`,
         },

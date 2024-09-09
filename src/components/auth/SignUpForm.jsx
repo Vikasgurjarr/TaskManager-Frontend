@@ -20,7 +20,7 @@ import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import { toast } from "react-toastify";
 
-const URL = `http://localhost:5000/api/auth/register`;
+const URL = `https://taskyoubackend.netlify.app/.netlify/functions/server/api/auth/register`;
 
 const defaultTheme = createTheme();
 
