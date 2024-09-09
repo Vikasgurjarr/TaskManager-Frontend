@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 import { storeTokenInLS } from "../../utils/Token";
 import { toast } from "react-toastify";
 
-const URL = `http://localhost:5000/api/auth/login`;
+const URL = `https://taskyoubackend.netlify.app/.netlify/functions/server/api/auth/login`;
 
 const defaultTheme = createTheme();
 
