@@ -21,7 +21,7 @@ export const fetchTasks = () => async (dispatch) => {
   dispatch(fetchTasksRequest());
   try {
     const authToken = localStorage.getItem("token");
-    const response = await fetch("https://taskyoubackend.netlify.app/.netlify/functions/server/api/tasks", {
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/tasks`, {
       headers: {
         Authorization: `Bearer ${authToken}`,
       },
@@ -40,7 +40,7 @@ export const createNewTask = (newTaskData) => async (dispatch) => {
   dispatch(createTaskRequest());
   try {
     const authToken = localStorage.getItem("token");
-    const response = await fetch("https://taskyoubackend.netlify.app/.netlify/functions/server/api/tasks", {
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/tasks`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -63,7 +63,7 @@ export const updateTask = (updatedTaskData) => async (dispatch) => {
   try {
     const authToken = localStorage.getItem("token");
     const response = await fetch(
-      `https://taskyoubackend.netlify.app/.netlify/functions/server/api/tasks/${updatedTaskData._id}`,
+      `${import.meta.env.VITE_BACKEND_URL}/api/tasks/${updatedTaskData._id}`,
       {
         method: "PUT",
         headers: {
@@ -87,7 +87,7 @@ export const deleteTask = (taskId) => async (dispatch) => {
   dispatch(deleteTaskRequest());
   try {
     const authToken = localStorage.getItem("token");
-    const response = await fetch(`https://taskyoubackend.netlify.app/.netlify/functions/server/api/tasks/${taskId}`, {
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/tasks/${taskId}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${authToken}`,
@@ -109,7 +109,7 @@ export const addComment =
     try {
       const authToken = localStorage.getItem("token");
       const response = await fetch(
-        `https://taskyoubackend.netlify.app/.netlify/functions/server/api/tasks/${taskId}/comments`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/tasks/${taskId}/comments`,
         {
           method: "POST",
           headers: {
